@@ -7,8 +7,11 @@ import { Projects } from "@/components/portfolio/Projects";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
+import { useLenis } from "@/hooks/use-lenis";
 
 const Index = () => {
+  useLenis();
+  
   return (
     <div className="min-h-screen">
       <ScrollProgress />

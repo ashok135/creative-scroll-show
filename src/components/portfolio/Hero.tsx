@@ -3,6 +3,8 @@ import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
+import { MagneticElement } from "@/components/ui/magnetic-element";
+import { ParallaxText } from "@/components/ui/parallax-text";
 
 const roles = [
   "WordPress Developer",
@@ -80,17 +82,19 @@ export function Hero() {
           </motion.div>
 
           {/* Main Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6"
-          >
-            Hi, I'm{" "}
-            <span className="text-gradient bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              Ashok Kumar
-            </span>
-          </motion.h1>
+          <ParallaxText speed={0.2} className="mb-6">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-5xl md:text-7xl font-bold text-white"
+            >
+              Hi, I'm{" "}
+              <span className="text-gradient bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                Ashok Kumar
+              </span>
+            </motion.h1>
+          </ParallaxText>
 
           {/* Animated Role */}
           <motion.div
@@ -130,24 +134,28 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
-            <Button
-              size="lg"
-              onClick={() => scrollToNext()}
-              className="bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-sm transition-all duration-300 hover:scale-105 shadow-glow"
-            >
-              View My Work
-              <ArrowDown className="ml-2 h-5 w-5" />
-            </Button>
+            <MagneticElement strength={0.3}>
+              <Button
+                size="lg"
+                onClick={() => scrollToNext()}
+                className="bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-sm transition-all duration-300 hover:scale-105 shadow-glow"
+              >
+                View My Work
+                <ArrowDown className="ml-2 h-5 w-5" />
+              </Button>
+            </MagneticElement>
             
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => window.open("mailto:ashoksiva135@gmail.com")}
-              className="bg-transparent hover:bg-white/10 text-white border-white/30 hover:border-white/50 backdrop-blur-sm transition-all duration-300 hover:scale-105"
-            >
-              <Download className="mr-2 h-5 w-5" />
-              Download CV
-            </Button>
+            <MagneticElement strength={0.3}>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => window.open("mailto:ashoksiva135@gmail.com")}
+                className="bg-transparent hover:bg-white/10 text-white border-white/30 hover:border-white/50 backdrop-blur-sm transition-all duration-300 hover:scale-105"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download CV
+              </Button>
+            </MagneticElement>
           </motion.div>
 
           {/* Social Links */}
@@ -162,18 +170,19 @@ export function Hero() {
               { icon: Linkedin, href: "https://linkedin.com/in/ashok-kumar", label: "LinkedIn" },
               { icon: Mail, href: "mailto:ashoksiva135@gmail.com", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
-              <motion.a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30 hover:bg-white/30 transition-all duration-300 shadow-glow"
-              >
-                <Icon className="h-5 w-5 text-white" />
-                <span className="sr-only">{label}</span>
-              </motion.a>
+              <MagneticElement key={label} strength={0.4}>
+                <motion.a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30 hover:bg-white/30 transition-all duration-300 shadow-glow"
+                >
+                  <Icon className="h-5 w-5 text-white" />
+                  <span className="sr-only">{label}</span>
+                </motion.a>
+              </MagneticElement>
             ))}
           </motion.div>
         </div>

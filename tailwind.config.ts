@@ -73,10 +73,13 @@ export default {
         'gradient-primary': 'var(--gradient-primary)',
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-card': 'var(--gradient-card)',
+        'gradient-mesh': 'var(--gradient-mesh)',
+        'gradient-text': 'var(--gradient-text)',
       },
       boxShadow: {
         glow: 'var(--shadow-glow)',
         primary: 'var(--shadow-primary)',
+        intense: 'var(--shadow-intense)',
       },
       borderRadius: {
         lg: "var(--radius)",

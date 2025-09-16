@@ -18,10 +18,14 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
     
-    /* Modern blue-purple gradient theme */
-    --primary: 262 83% 58%;
+    /* Enhanced gradient theme with more depth */
+    --primary: 270 91% 65%;
     --primary-foreground: 210 40% 98%;
-    --primary-glow: 262 90% 70%;
+    --primary-glow: 280 95% 75%;
+    --primary-dark: 260 85% 45%;
+    --accent-purple: 290 95% 70%;
+    --accent-blue: 220 91% 65%;
+    --accent-cyan: 190 95% 70%;
     
     --secondary: 220 14.3% 95.9%;
     --secondary-foreground: 220.9 39.3% 11%;
@@ -29,7 +33,7 @@ All colors MUST be HSL.
     --muted: 220 14.3% 95.9%;
     --muted-foreground: 220 8.9% 46.1%;
     
-    --accent: 262 83% 58%;
+    --accent: 290 95% 70%;
     --accent-foreground: 210 40% 98%;
     
     --destructive: 0 84.2% 60.2%;
@@ -41,23 +45,28 @@ All colors MUST be HSL.
     
     --radius: 0.75rem;
     
-    /* Custom portfolio colors */
-    --hero-bg: 262 90% 50%;
-    --hero-secondary: 280 90% 60%;
+    /* Enhanced portfolio colors */
+    --hero-bg: 270 91% 65%;
+    --hero-secondary: 290 95% 70%;
     --success: 142 76% 36%;
     --warning: 38 92% 50%;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(280 90% 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(262 90% 50%), hsl(280 90% 60%), hsl(300 80% 70%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 14% 96%));
+    /* Advanced gradients with more stops */
+    --gradient-primary: linear-gradient(135deg, hsl(270 91% 65%), hsl(290 95% 70%), hsl(310 85% 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(270 91% 65%) 0%, hsl(290 95% 70%) 50%, hsl(220 91% 65%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 14% 96%) 50%, hsl(240 20% 98%) 100%);
+    --gradient-mesh: radial-gradient(circle at 20% 50%, hsl(270 91% 65% / 0.3) 0%, transparent 50%), 
+                     radial-gradient(circle at 80% 20%, hsl(290 95% 70% / 0.3) 0%, transparent 50%), 
+                     radial-gradient(circle at 40% 80%, hsl(220 91% 65% / 0.3) 0%, transparent 50%);
+    --gradient-text: linear-gradient(90deg, hsl(270 91% 65%), hsl(290 95% 70%), hsl(220 91% 65%));
     
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1);
-    --shadow-glow: 0 0 30px hsl(262 83% 58% / 0.3);
-    --shadow-primary: 0 10px 30px -10px hsl(262 83% 58% / 0.4);
+    /* Enhanced shadows with color */
+    --shadow-sm: 0 1px 2px 0 hsl(270 91% 65% / 0.08);
+    --shadow-md: 0 4px 6px -1px hsl(270 91% 65% / 0.12);
+    --shadow-lg: 0 10px 15px -3px hsl(270 91% 65% / 0.15);
+    --shadow-glow: 0 0 40px hsl(270 91% 65% / 0.4), 0 0 80px hsl(290 95% 70% / 0.2);
+    --shadow-primary: 0 10px 40px -10px hsl(270 91% 65% / 0.5);
+    --shadow-intense: 0 20px 60px -10px hsl(270 91% 65% / 0.3), 0 0 100px hsl(290 95% 70% / 0.2);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -110,20 +119,25 @@ All colors MUST be HSL.
     --input: 240 3.7% 15.9%;
     --ring: 262 83% 58%;
     
-    /* Dark theme custom colors */
-    --hero-bg: 262 83% 58%;
-    --hero-secondary: 280 90% 60%;
+    /* Enhanced dark theme colors */
+    --hero-bg: 270 91% 65%;
+    --hero-secondary: 290 95% 70%;
     --success: 142 69% 58%;
     --warning: 38 92% 50%;
     
-    /* Dark gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(280 90% 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%), hsl(280 90% 60%), hsl(300 80% 70%));
-    --gradient-card: linear-gradient(145deg, hsl(240 10% 3.9%), hsl(240 3.7% 15.9%));
+    /* Enhanced dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 91% 65%), hsl(290 95% 70%), hsl(310 85% 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(270 91% 65%) 0%, hsl(290 95% 70%) 50%, hsl(220 91% 65%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(240 10% 3.9%) 0%, hsl(240 3.7% 15.9%) 50%, hsl(250 5% 10%) 100%);
+    --gradient-mesh: radial-gradient(circle at 20% 50%, hsl(270 91% 65% / 0.2) 0%, transparent 50%), 
+                     radial-gradient(circle at 80% 20%, hsl(290 95% 70% / 0.2) 0%, transparent 50%), 
+                     radial-gradient(circle at 40% 80%, hsl(220 91% 65% / 0.2) 0%, transparent 50%);
+    --gradient-text: linear-gradient(90deg, hsl(270 91% 65%), hsl(290 95% 70%), hsl(220 91% 65%));
     
-    /* Dark shadows */
-    --shadow-glow: 0 0 30px hsl(262 83% 58% / 0.5);
-    --shadow-primary: 0 10px 30px -10px hsl(262 83% 58% / 0.6);
+    /* Enhanced dark shadows */
+    --shadow-glow: 0 0 50px hsl(270 91% 65% / 0.6), 0 0 100px hsl(290 95% 70% / 0.3);
+    --shadow-primary: 0 10px 40px -10px hsl(270 91% 65% / 0.7);
+    --shadow-intense: 0 20px 60px -10px hsl(270 91% 65% / 0.4), 0 0 120px hsl(290 95% 70% / 0.3);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -187,11 +201,38 @@ All colors MUST be HSL.
     transition: var(--transition-bouncy);
   }
   
-  .text-gradient {
-    background: var(--gradient-primary);
+  .bg-gradient-mesh {
+    background: var(--gradient-mesh);
+  }
+  
+  .text-gradient-enhanced {
+    background: var(--gradient-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+  
+  .shadow-intense {
+    box-shadow: var(--shadow-intense);
+  }
+  
+  /* Enhanced hover effects */
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-intense);
+  }
+  
+  .hover-glow {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+    transform: scale(1.02);
   }
   
   /* Custom scrollbar */
