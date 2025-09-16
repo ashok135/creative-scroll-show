@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import { MagneticElement } from "@/components/ui/magnetic-element";
 import { ParallaxText } from "@/components/ui/parallax-text";
+import { InteractiveBackground } from "@/components/ui/interactive-background";
 
 const roles = [
   "WordPress Developer",
@@ -40,32 +41,10 @@ export function Hero() {
     <section
       id="hero"
       ref={ref}
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-hero"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-hero cursor-none"
     >
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {Array.from({ length: 20 }).map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-white/20 rounded-full"
-            animate={{
-              x: [0, Math.random() * 100 - 50],
-              y: [0, Math.random() * 100 - 50],
-              scale: [1, 1.5, 1],
-              opacity: [0.3, 0.8, 0.3],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-          />
-        ))}
-      </div>
+      {/* Interactive Background */}
+      <InteractiveBackground />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">

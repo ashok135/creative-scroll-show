@@ -253,6 +253,15 @@ All colors MUST be HSL.
     background: linear-gradient(to bottom, hsl(var(--primary-glow)), hsl(var(--primary)));
   }
   
+  /* Custom cursor styles */
+  .cursor-none {
+    cursor: none;
+  }
+  
+  .cursor-none * {
+    cursor: none !important;
+  }
+  
   /* Selection */
   ::selection {
     background: hsl(var(--primary) / 0.3);
